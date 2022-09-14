@@ -1,0 +1,119 @@
+html {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --transparent-white-1: hsla(0, 0%, 100%, 0.6);
+    --transparent-white-2: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Lexend Deca', sans-serif; */
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+}
+
+article {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 60rem;
+}
+
+.main-content {
+    background-color: var(--dark-desaturated-blue);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px; */
+    width: 50%;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1 span {
+    color: var(--soft-violet);
+}
+
+p {
+    color: var(--transparent-white-2);
+}
+
+.main-content .stat-section {
+    display: flex;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 2rem 0rem 0;
+}
+
+.stats p {
+    text-transform: uppercase;
+    color: var(--transparent-white-1);
+}
+
+.desktop-image {
+    background-color: var(--soft-violet);
+    background-image: url(./stats-preview-card-component-main/images/image-header-desktop.jpg);
+    background-blend-mode: soft-light;
+    /* border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px; */
+    height: 25rem;
+    width: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.mobile-image {
+    display: none;
+    background-image: url(./stats-preview-card-component-main/images/image-header-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    background-blend-mode: soft-light;
+    background-color: var(--soft-violet);
+}
+
+@media (max-width: 960px) {
+    main {
+        text-align: center;
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .main-content {
+        width: auto;
+    }
+    .desktop-image {
+        display: none;
+    }
+    .mobile-image {
+        display: block;
+    }
+    .main-content .stat-section {
+        flex-direction: column;
+    }
+    .stats {
+        margin: 0rem;
+    }
+}
